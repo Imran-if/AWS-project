@@ -1,0 +1,16 @@
+# Node.js
+node_modules/
+
+# Environment Variables
+.env
+
+# Build Artifacts
+/dist/
+/build/
+
+# Logs
+*.log
+
+# Sensitive Files
+*.pem
+*.key
