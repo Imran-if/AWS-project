@@ -47,6 +47,12 @@ terraform apply
 ## 🌐 Access
 
 `http://<NODE_IP>:30007`
+<img width="1688" height="952" alt="Screenshot 2026-03-27 230440" src="https://github.com/user-attachments/assets/e10944e3-4498-4bd7-b45f-48fa8a0776f7" />
+
+
+
+
+
 
 ## 🔧 Required Placeholder Updates
 
