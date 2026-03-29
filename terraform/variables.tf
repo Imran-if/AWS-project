@@ -3,25 +3,25 @@ variable "aws_region" {
   type        = string
   default     = "us-east-1"
 }
+
 variable "ami_id" {
   description = "AMI ID for the Jenkins server"
   type        = string
-  default = "ami-05d2d839d4f73aafb" 
+  default     = "ami-xxxxxxxxxxxxxxxxx"
 }
-variable "instance_type"  {
+
+variable "instance_type" {
   description = "EC2 instance type for the Jenkins server"
   type        = string
   default     = "t3.micro"
 }
-variable "key_pair_name" {
-  description = "Name of the existing AWS key pair for SSH access"
-  type        = string 
-  default = "devops"
-} 
 
-variable "artifact_bucket_name"  {
-  description = "Globally unique S3 bucket name for CI/CD artifacts"
+variable "key_pair_name" {
+  description = "Name of an existing AWS key pair for SSH access"
   type        = string
-  default     = "devops-jenkins-artifacts-2024"
 }
 
+variable "artifact_bucket_name" {
+  description = "Globally unique S3 bucket name for CI/CD artifacts"
+  type        = string
+}

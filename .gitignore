@@ -14,3 +14,16 @@ node_modules/
 # Sensitive Files
 *.pem
 *.key
+
+# Terraform state & overrides
+*.tfstate
+*.tfstate.*
+.terraform/
+*.tfvars
+override.tf
+override.tf.json
+*_override.tf
+*_override.tf.json
+
+# Kubernetes / CI secrets
+kubeconfig
