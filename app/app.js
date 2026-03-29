@@ -7,7 +7,7 @@ const PORT = process.env.PORT || 3000;
 const startedAt = Date.now();
 let requestCount = 0;
 
-app.use((req, res, next) => {
+app.use((req, _res, next) => {
   requestCount += 1;
   next();
 });
@@ -31,6 +31,10 @@ app.get('/metrics', (_req, res) => {
   );
 });
 
-app.listen(PORT, () => {
-  console.log(`Todo app listening on port ${PORT}`);
-});
+if (require.main === module) {
+  app.listen(PORT, () => {
+    console.log(`Todo app listening on port ${PORT}`);
+  });
+}
+
+module.exports = app;

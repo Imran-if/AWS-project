@@ -4,7 +4,9 @@
   "description": "Node.js Todo demo app for DevOps Jenkins + Kubernetes pipeline",
   "main": "app.js",
   "scripts": {
-    "start": "node app.js"
+    "start": "node app.js",
+    "lint": "node --check app.js",
+    "test": "node test.js"
   },
   "dependencies": {
     "express": "^4.19.2"

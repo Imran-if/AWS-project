@@ -14,6 +14,24 @@ pipeline {
       }
     }
 
+    stage('Install Dependencies') {
+      steps {
+        sh 'npm ci --prefix app'
+      }
+    }
+
+    stage('Lint') {
+      steps {
+        sh 'npm run lint --prefix app'
+      }
+    }
+
+    stage('Test') {
+      steps {
+        sh 'npm test --prefix app'
+      }
+    }
+
     stage('Build Docker Image') {
       steps {
         sh 'docker build -t ${IMAGE_NAME}:${IMAGE_TAG} -t ${IMAGE_NAME}:latest .'
