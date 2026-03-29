@@ -53,6 +53,25 @@ terraform apply
 
 
 
+## 📈 Monitoring 
+
+Basic monitoring is included with Prometheus + Grafana:
+
+1. Start all services:
+
+```bash
+docker compose up -d --build
+```
+
+2. Open:
+   - App: `http://localhost:3000`
+   - Prometheus: `http://localhost:9090`
+   - Grafana: `http://localhost:3001` (default login: `admin` / `admin`)
+
+3. In Grafana, add a Prometheus data source with URL: `http://prometheus:9090`
+
+The app exposes `app_requests_total` at `/metrics`, and Prometheus is preconfigured to scrape it every 15 seconds.
+
 
 ## 🔧 Required Placeholder Updates
 
