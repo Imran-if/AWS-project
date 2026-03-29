@@ -81,6 +81,8 @@ docker compose up -d --build
 3. In Grafana, add a Prometheus data source with URL: `http://prometheus:9090`
 
 The app exposes `app_requests_total` at `/metrics`, and Prometheus scrapes it every 15 seconds.
+<img width="1688" height="952" alt="Screenshot 2026-03-27 230440" src="https://github.com/user-attachments/assets/ffabccef-ef63-4f5d-95c7-c8b0a5a51bff" />
+
 
 ## 🔐 Sensitive Information Safety Checklist
 
